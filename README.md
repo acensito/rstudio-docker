@@ -10,8 +10,8 @@ Entorno de RStudio Server en Docker para estudiar y hacer tareas de R. Incluye l
 ## Uso
 
 ```bash
-git clone https://github.com/<tu-usuario>/<tu-repositorio>.git
-cd <tu-repositorio>
+git clone https://github.com/acensito/rstudio-docker.git
+cd rstudio-docker
 docker compose up -d
 ```
 
@@ -64,7 +64,7 @@ git init
 git add .
 git commit -m "Primer commit: entorno RStudio con Docker"
 git branch -M main
-git remote add origin https://github.com/<tu-usuario>/<tu-repositorio>.git
+git remote add origin https://github.com/acensito/rstudio-docker.git
 git push -u origin main
 ```
 
