@@ -1,0 +1,21 @@
+# Archivos temporales de R / RStudio
+.Rhistory
+.RData
+.Ruserdata
+.Rproj.user/
+*.Rproj.user
+.httr-oauth
+
+# Salidas de documentos R Markdown / knitr
+*_cache/
+*_files/
+/.quarto/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
