@@ -4,15 +4,14 @@ services:
     container_name: rstudio
     environment:
       - PASSWORD=cambiame    # cambia la contraseña
-      - DISABLE_AUTH=false   # deshabilita la autenticación y no requiere contraseña (aunque no es recomendable)
+      - DISABLE_AUTH=true   # deshabilita la autenticación y no requiere contraseña (aunque no es recomendable)
       - TZ=Europe/Madrid     # zona horaria
       - ROOT=false           # permite ejecutar RStudio como root (no recomendable, no es necesario toca en principio)
     ports:
       - "127.0.0.1:8787:8787"   # solo accesible desde el equipo local (localhost), descomenta la siguiente línea para acceder desde otros equipos de la red
       # - "8787:8787"           # descomenta (y comenta la de arriba) para acceder desde otros equipos de la red
     volumes:
-      - ./scripts:/home/rstudio/scripts
-      - ./datos:/home/rstudio/datos
+      - ./proyectos:/home/rstudio/proyectos   # proyectos y carpetas de trabajo (visibles en el host)
       - rstudio_config:/home/rstudio/.config/rstudio
       - r_libs:/usr/local/lib/R/site-library
     restart: unless-stopped

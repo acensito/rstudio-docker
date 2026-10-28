@@ -17,3 +17,4 @@ nueva_fecha <- fecha + 7
 diferencia <- fecha - Sys.Date()  # Diferencia en días
 print(paste("Una semana despues del",fecha,"es",nueva_fecha))
 print(paste("Queda", diferencia,"dias para el",fecha))
+

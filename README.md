@@ -34,12 +34,12 @@ docker compose down                    # eliminarlo (los volúmenes se conservan
 ```
 .
 ├── docker-compose.yml   # configuración del contenedor
-├── scripts/             # scripts de R (se montan en ~/scripts)
-│   └── temario/
-└── datos/               # datos de trabajo (se montan en ~/datos)
+└── proyectos/           # proyectos y carpetas de trabajo (se montan en ~/proyectos)
+    ├── ejemplo/         # proyecto de ejemplo: ejemplo.R + datos_ejemplo/
+    └── scripts_temario/ # scripts del temario
 ```
 
-Las carpetas `scripts` y `datos` están enlazadas con el contenedor: lo que edites en RStudio se guarda en tu equipo.
+La carpeta `proyectos` está enlazada con el contenedor: lo que crees o edites en `~/proyectos` desde RStudio se guarda en tu equipo. Lo que quede fuera se pierde al recrear el contenedor.
 
 ## Configuración
 
@@ -68,4 +68,4 @@ git remote add origin https://github.com/acensito/rstudio-docker.git
 git push -u origin main
 ```
 
-> Antes de subirlo, cambia la contraseña de `docker-compose.yml` por una que no uses en otros sitios, y no subas datos privados de la carpeta `datos/`.
+> Antes de subirlo, cambia la contraseña de `docker-compose.yml` por una que no uses en otros sitios, y no subas datos privados de la carpeta `proyectos/`.
